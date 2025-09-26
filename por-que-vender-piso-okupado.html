@@ -108,34 +108,19 @@
           </div>
           <div class="col-lg-6">
             <div class="card border-0 shadow-lg">
-              <div class="card-body p-4">
-                <h3 class="h4">Da el paso hoy mismo</h3>
-                <p>Cuéntanos tu caso y prepararemos una propuesta a medida en menos de 24 horas.</p>
-                <form class="row g-3" method="post" action="#">
-                  <div class="col-md-6">
-                    <label for="why-name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="why-name" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="why-phone" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="why-phone" required>
-                  </div>
-                  <div class="col-12">
-                    <label for="why-city" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="why-city">
-                  </div>
-                  <div class="col-12">
-                    <label for="why-comment" class="form-label">Comentario</label>
-                    <textarea class="form-control" id="why-comment" rows="3"></textarea>
-                  </div>
-                  <div class="col-12 form-check">
-                    <input class="form-check-input" type="checkbox" id="why-rgpd" required>
-                    <label class="form-check-label" for="why-rgpd">Acepto la Política de Privacidad</label>
-                  </div>
-                  <div class="col-12">
-                    <button type="submit" class="btn btn-primary btn-lg w-100">Recibir oferta</button>
-                  </div>
-                </form>
+              <div class="card-body p-4" id="contacto">
+                <h3 class="h4 mb-3">¿Hablamos ahora?</h3>
+                <p class="mb-4">Completa el formulario y te damos <strong>tasación gratis</strong> y <strong>oferta en 24h</strong>.</p>
+
+                <!-- Jotform -->
+                <div class="ratio ratio-16x9 mb-3" id="jotform-wrapper">
+                  <script type="text/javascript" src="https://form.jotform.com/jsform/252685821114355" defer></script>
+                  <noscript>
+                    <iframe title="Formulario de contacto" src="https://form.jotform.com/252685821114355" style="width:100%;height:700px;border:0;"></iframe>
+                  </noscript>
+                </div>
+
+                <p class="small text-muted">Tratamos tus datos conforme al RGPD. Atención 9:00–20:00.</p>
               </div>
             </div>
           </div>
@@ -158,8 +143,6 @@
     </section>
 
   </main>
-
-  <div id="contacto"></div>
 
 <footer id="footer" class="footer dark-background">
     <div class="container footer-top">
@@ -220,7 +203,6 @@
   <div id="preloader"></div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
