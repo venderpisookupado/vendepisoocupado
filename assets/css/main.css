@@ -4788,3 +4788,28 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/*--------------------------------------------------------------
+# Jotform Responsive Overrides
+--------------------------------------------------------------*/
+#contacto .card,
+#contacto .card-body {
+  overflow: visible;
+}
+
+@media (max-width: 576px) {
+  #JotFormIFrame-252685821114355 {
+    min-height: 1300px;
+  }
+}
+
+.whatsapp-float {
+  right: 16px;
+  bottom: 24px;
+  z-index: 1030;
+}
+
+@media (max-width: 576px) {
+  .whatsapp-float {
+    bottom: 88px;
+  }
+}
