@@ -113,18 +113,63 @@
             </ul>
           </div>
           <div class="col-lg-6">
-            <div class="card border-0 shadow-lg">
-              <div class="card-body p-4" id="contacto">
+            <div class="card border-0 shadow-lg overflow-visible">
+              <div class="card-body p-4 overflow-visible" id="contacto">
                 <h3 class="h4 mb-3">¿Hablamos ahora?</h3>
                 <p class="mb-4">Completa el formulario y te damos <strong>tasación gratis</strong> y <strong>oferta en 24h</strong>.</p>
 
-                <!-- Jotform -->
-                <div class="ratio ratio-16x9 mb-3" id="jotform-wrapper">
-                  <script type="text/javascript" src="https://form.jotform.com/jsform/252685821114355" defer></script>
-                  <noscript>
-                    <iframe title="Formulario de contacto" src="https://form.jotform.com/252685821114355" style="width:100%;height:700px;border:0;"></iframe>
-                  </noscript>
-                </div>
+                <!-- CONTACTO · JOTFORM (RESPONSIVE/FULL HEIGHT) -->
+                <iframe
+                  id="JotFormIFrame-252685821114355"
+                  title="Formulario de contacto"
+                  allowtransparency="true"
+                  allow="geolocation; microphone; camera"
+                  src="https://form.jotform.com/252685821114355"
+                  style="width:100%; min-height: 1100px; border:0; display:block;"
+                  scrolling="no">
+                </iframe>
+
+                <noscript>
+                  <iframe
+                    title="Formulario de contacto (fallback)"
+                    src="https://form.jotform.com/252685821114355"
+                    style="width:100%; height:1400px; border:0;">
+                  </iframe>
+                </noscript>
+
+                <!-- AUTOSIZE LISTENER (RESPECTS JOTFORM MESSAGES) -->
+                <script>
+                (function () {
+                  var ifr = document.getElementById('JotFormIFrame-252685821114355');
+                  function setHeight(h){
+                    if(!ifr) return;
+                    var px = parseInt(h,10);
+                    if(!isNaN(px) && px > 400){ ifr.style.minHeight = px + 'px'; }
+                  }
+                  window.addEventListener('message', function(e){
+                    try{
+                      var data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+                      // Jotform posts objects like { "type":"setHeight","height":1234 } or "setHeight:1234"
+                      if(data && (data.type === 'setHeight' || data.message === 'setHeight')){
+                        setHeight(data.height || (data.value && data.value.height));
+                      } else if(typeof e.data === 'string' && e.data.indexOf('setHeight') > -1){
+                        var parts = e.data.split(':');
+                        setHeight(parts[1]);
+                      }
+                      // Scroll into view if Jotform requests it
+                      if(data && (data.type === 'scrollIntoView' || data.message === 'scrollIntoView')){
+                        ifr.scrollIntoView({behavior:'smooth', block:'start'});
+                      }
+                    }catch(err){/* ignore */}
+                  });
+
+                  // Safety resize on orientation change / resize
+                  ['orientationchange','resize'].forEach(function(ev){
+                    window.addEventListener(ev, function(){ setHeight(window.innerHeight + 300); });
+                  });
+                })();
+                </script>
+
 
                 <p class="small text-muted">Tratamos tus datos conforme al RGPD. Atención 9:00–20:00.</p>
               </div>
@@ -230,11 +275,11 @@
 
 <style>
   .whatsapp-float{
-    position:fixed; right:16px; bottom:16px; z-index:1030; display:inline-flex;
+    position:fixed; right:16px; bottom:24px; z-index:1030; display:inline-flex;
     align-items:center; justify-content:center; width:56px; height:56px;
     border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,.2);
   }
-  @media (min-width: 992px){ .whatsapp-float{ right:24px; bottom:24px; } }
+  @media (max-width: 576px){ .whatsapp-float{ bottom:88px; } }
 </style>
 
 </body>
