@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Compramos pisos ocupados en 48h | Venta rápida y legal en España</title>
   <meta name="description" content="Vende tu piso ocupado de forma rápida, legal y sin complicaciones. Tasación gratuita y pago al contado en 48h.">
   <meta name="keywords" content="vender piso ocupado, vender piso con okupas, venta rápida pisos okupados">
@@ -30,51 +30,37 @@
 
 <body class="index-page">
 
-  <header id="header" class="header sticky-top">
+<!-- NAVBAR RESPONSIVE -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="index.html">VendeTuPisoOcupado</a>
 
-    <div class="topbar d-flex align-items-center dark-background">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@nombreMarca.com">info@nombreMarca.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+34 695 416 518</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="branding d-flex align-items-cente">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <h1 class="sitename">VendeTuPisoOcupado</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="como-funciona.html">Cómo funciona</a></li>
-            <li><a href="vender-piso-ocupado-madrid.html">Madrid</a></li>
-            <li><a href="situacion-legal-okupacion.html">Situación legal</a></li>
-            <li><a href="por-que-vender-piso-okupado.html">Por qué vender</a></li>
-            <li><a href="quien-compra-pisos-ocupados.html">Quién compra</a></li>
-            <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Abrir menú"></i>
-        </nav>
-
-      </div>
-
+    <!-- Items -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="como-funciona.html">Cómo funciona</a></li>
+        <li class="nav-item"><a class="nav-link" href="vender-piso-ocupado-madrid.html">Madrid</a></li>
+        <li class="nav-item"><a class="nav-link" href="situacion-legal-okupacion.html">Situación legal</a></li>
+        <li class="nav-item"><a class="nav-link" href="por-que-vender-piso-okupado.html">Ventajas</a></li>
+        <li class="nav-item"><a class="nav-link" href="quien-compra-pisos-ocupados.html">Quién compra</a></li>
+        <li class="nav-item"><a class="nav-link" href="preguntas-frecuentes.html">FAQ</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-primary btn-sm" href="#contacto">Contacto</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-  </header>
 
-  <main class="main">
+<main class="main">
 
     <section id="hero" class="hero section py-5">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -311,7 +297,9 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <div id="contacto"></div>
+
+<footer id="footer" class="footer dark-background">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
@@ -431,23 +419,28 @@
     }
   </script>
 
-  <a href="https://wa.me/34695416518?text=Quiero%20una%20oferta%20por%20mi%20piso%20ocupado" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
-    <img src="assets/img/whatsapp.svg" alt="WhatsApp">
-  </a>
-  <style>
-    .whatsapp-float {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 1030;
-      display: inline-block;
-    }
 
-    .whatsapp-float img {
-      width: 56px;
-      height: 56px;
-    }
-  </style>
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/34695416518?text=Hola%2C%20quiero%20una%20oferta%20por%20mi%20piso%20ocupado."
+   class="whatsapp-float" aria-label="WhatsApp VendeTuPisoOcupado" target="_blank" rel="noopener">
+  <!-- Fallback inline SVG (no depende de archivos externos) -->
+  <svg width="56" height="56" viewBox="0 0 256 256" role="img" aria-hidden="true">
+    <defs><linearGradient id="wa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#25D366"/><stop offset="100%" stop-color="#128C7E"/>
+    </linearGradient></defs>
+    <circle cx="128" cy="128" r="128" fill="url(#wa)"></circle>
+    <path fill="#fff" d="M186.6 69.4A67.7 67.7 0 0 0 59 169l-7.1 26.1a8 8 0 0 0 9.8 9.8l26.1-7.1A67.7 67.7 0 1 0 186.6 69.4Zm-58.6 119a55 55 0 0 1-28-7.7l-2-.1-16.7 4.6 4.5-16.5-.1-2a55 55 0 1 1 42.3 21.7Zm31.9-41.6-9-2.6a8 8 0 0 0-7.6 2.1l-3.9 4a43.4 43.4 0 0 1-20.3-20.3l4-3.9a8 8 0 0 0 2.1-7.6l-2.6-9a8 8 0 0 0-7.7-5.7 19.6 19.6 0 0 0-19.5 24.6 72.3 72.3 0 0 0 42.1 42.1 19.6 19.6 0 0 0 24.6-19.5 8 8 0 0 0-5.7-7.7Z"/>
+  </svg>
+</a>
+
+<style>
+  .whatsapp-float{
+    position:fixed; right:16px; bottom:16px; z-index:1030; display:inline-flex;
+    align-items:center; justify-content:center; width:56px; height:56px;
+    border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,.2);
+  }
+  @media (min-width: 992px){ .whatsapp-float{ right:24px; bottom:24px; } }
+</style>
 
 </body>
 

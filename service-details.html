@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Service Details - Constructo Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -38,78 +38,37 @@
 
 <body class="service-details-page">
 
-  <header id="header" class="header sticky-top">
+<!-- NAVBAR RESPONSIVE -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="index.html">VendeTuPisoOcupado</a>
 
-    <div class="topbar d-flex align-items-center dark-background">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+34 695 416 518</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="branding d-flex align-items-cente">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <h1 class="sitename">Constructo</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="service-details.html" class="active">Service Details</a></li>
-                <li><a href="project-details.html">Project Details</a></li>
-                <li><a href="quote.html">Quote Form</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="404.html">404</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-      </div>
-
+    <!-- Items -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="como-funciona.html">Cómo funciona</a></li>
+        <li class="nav-item"><a class="nav-link" href="vender-piso-ocupado-madrid.html">Madrid</a></li>
+        <li class="nav-item"><a class="nav-link" href="situacion-legal-okupacion.html">Situación legal</a></li>
+        <li class="nav-item"><a class="nav-link" href="por-que-vender-piso-okupado.html">Ventajas</a></li>
+        <li class="nav-item"><a class="nav-link" href="quien-compra-pisos-ocupados.html">Quién compra</a></li>
+        <li class="nav-item"><a class="nav-link" href="preguntas-frecuentes.html">FAQ</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-primary btn-sm" href="#contacto">Contacto</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-  </header>
 
-  <main class="main">
+<main class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
@@ -391,7 +350,9 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <div id="contacto"></div>
+
+<footer id="footer" class="footer dark-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -471,6 +432,30 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/34695416518?text=Hola%2C%20quiero%20una%20oferta%20por%20mi%20piso%20ocupado."
+   class="whatsapp-float" aria-label="WhatsApp VendeTuPisoOcupado" target="_blank" rel="noopener">
+  <!-- Fallback inline SVG (no depende de archivos externos) -->
+  <svg width="56" height="56" viewBox="0 0 256 256" role="img" aria-hidden="true">
+    <defs><linearGradient id="wa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#25D366"/><stop offset="100%" stop-color="#128C7E"/>
+    </linearGradient></defs>
+    <circle cx="128" cy="128" r="128" fill="url(#wa)"></circle>
+    <path fill="#fff" d="M186.6 69.4A67.7 67.7 0 0 0 59 169l-7.1 26.1a8 8 0 0 0 9.8 9.8l26.1-7.1A67.7 67.7 0 1 0 186.6 69.4Zm-58.6 119a55 55 0 0 1-28-7.7l-2-.1-16.7 4.6 4.5-16.5-.1-2a55 55 0 1 1 42.3 21.7Zm31.9-41.6-9-2.6a8 8 0 0 0-7.6 2.1l-3.9 4a43.4 43.4 0 0 1-20.3-20.3l4-3.9a8 8 0 0 0 2.1-7.6l-2.6-9a8 8 0 0 0-7.7-5.7 19.6 19.6 0 0 0-19.5 24.6 72.3 72.3 0 0 0 42.1 42.1 19.6 19.6 0 0 0 24.6-19.5 8 8 0 0 0-5.7-7.7Z"/>
+  </svg>
+</a>
+
+<style>
+  .whatsapp-float{
+    position:fixed; right:16px; bottom:16px; z-index:1030; display:inline-flex;
+    align-items:center; justify-content:center; width:56px; height:56px;
+    border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,.2);
+  }
+  @media (min-width: 992px){ .whatsapp-float{ right:24px; bottom:24px; } }
+</style>
 
 </body>
 
